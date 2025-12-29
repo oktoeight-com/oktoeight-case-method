@@ -51,15 +51,21 @@ The CASE Method is format-agnostic. It applies to Slack messages, Jira tickets, 
 ### Example 1: Software
 
 > **Context:** I am trying to deploy the `feature-login` branch to staging to verify the new Single Sign-On (SSO) flow.
+>
 > **Action:** I ran `npm run deploy:staging` locally and verified that my IAM user has the `s3:PutObject` permission. I also confirmed the destination bucket exists via the AWS CLI.
+>
 > **Symptom:** The build fails at the "Upload to S3" step with a 403 Forbidden error.
+>
 > **Evidence:** See attached build log `error_log.txt`. The specific error is `AccessDenied: Access Denied` on line 45.
 
 ### Example 2: Hardware
 
 > **Context:** I am trying to calibrate the position transmitter on Control Valve V-101 (Steam Supply) using a 475 Field Communicator.
+>
 > **Action:** I performed the auto-tune sequence and verified the supply air is stable at 6 bar. I also hooked up a Fluke 789 to measure the loop current.
+>
 > **Symptom:** The valve moves to 50% physically, but the feedback signal reads 14.5mA (approx 65%) instead of 12mA. It fails the linearity check with a "Drive Signal Saturation" error.
+>
 > **Evidence:** See photo of the communicator screen showing the error code and the hysteresis graph.
 
 ## Abbreviations
