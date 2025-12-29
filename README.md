@@ -40,7 +40,7 @@ Standard help requests often suffer from the "Lazy Question" anti-pattern. CASE 
 While there are many excellent guides on "how to ask," there has never been a formal, format-agnostic **framework** for structured requests. CASE was built to fill this void. It is directly inspired by:
 
 *   **[How To Ask Questions The Smart Way](https://github.com/selfteaching/How-To-Ask-Questions-The-Smart-Way/blob/master/How-To-Ask-Questions-The-Smart-Way.md)** by Eric Steven Raymond.
-*   **[How to ask for help](https://howtoaskfor.help/)** by draganczukp.
+*   **[How to ask for help](https://howtoaskfor.help/)** by Przemek Dragańczuk.
 
 CASE unifies these philosophies into a framework that transitions from "reading a guide" to "executing a process."
 
