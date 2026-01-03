@@ -13,7 +13,7 @@ Whether you are debugging code, fixing a stuck valve, requesting budget, or clar
 
 ## Why CASE?
 
-Standard help requests often suffer from the "Lazy Question" anti-pattern. CASE uses a **Responsibility Model** to expose where the work belongs:
+Standard help requests suffer from the "Lazy Question" anti-pattern. CASE uses a **Responsibility Model** to expose where the work belongs:
 
 | Approach | Statement | Impact |
 | :--- | :--- | :--- |
@@ -26,14 +26,6 @@ Standard help requests often suffer from the "Lazy Question" anti-pattern. CASE 
 | :--- | :--- | :--- | :--- |
 | **SBAR** | Clinical Handoff | Assumes asker knows the solution ("Recommendation"). | Optimized for the *unknown* ("Symptom"). |
 
-### Why a Framework?
-
-While there are many excellent guides on "how to ask," there has never been a formal, format-agnostic **framework** for structured requests. CASE was built to fill this void. It is directly inspired by:
-
-*   **[How To Ask Questions The Smart Way](https://github.com/selfteaching/How-To-Ask-Questions-The-Smart-Way/blob/master/How-To-Ask-Questions-The-Smart-Way.md)** by Eric Steven Raymond.
-*   **[How to ask for help](https://howtoaskfor.help/)** by Przemek Dragańczuk.
-
-CASE unifies these philosophies into a framework that transitions from "reading a guide" to "executing a process."
 
 ## The CASE Framework
 
@@ -46,12 +38,18 @@ CASE stands for **C**ontext, **A**ction, **S**ymptom, and **E**vidence. These fo
 | **S**ymptom | *What happened?* | The Barrier, the error message, the leak, the noise. |
 | **E**vidence | *Can you prove it?* | The Details, logs, screenshots, photos, serial numbers. |
 
+## Operating Logic
+
 ### Severity Levels
 To prevent "everything is urgent" fatigue, CASE requires a declared severity:
 
 *   **S1 (Critical):** System down, safety hazard, or blocked production. Requires immediate interrupt.
 *   **S2 (Blocker):** Progress halted for one person/team. Requires same-day response.
 *   **S3 (Normal):** Efficiency or cosmetic issue. Adhere to standard SLAs.
+
+## Data Structure
+
+The CASE Request is a structured text block (email, ticket, or chat message) containing the four keys.
 
 ### Integrity Check (The 5-Minute Rule)
 Before hitting send, perform a final integrity check:
@@ -61,7 +59,7 @@ Before hitting send, perform a final integrity check:
 
 ## Implementation
 
-The CASE Method is format-agnostic. It applies to Slack messages, Jira tickets, and email threads equally.
+The CASE Method is format-agnostic. It applies to messages, tickets, and email threads equally.
 
 ### Example 1: Software
 
