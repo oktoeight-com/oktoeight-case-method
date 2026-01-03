@@ -7,6 +7,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 [Unreleased]
 
 ### Changed
+- Align README structure and terminology with framework standards.
 - Replace blockquote formatting with tables for examples in README
 - Update author name for "How to ask for help" link in README
 
