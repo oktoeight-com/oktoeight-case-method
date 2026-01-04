@@ -16,6 +16,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - Refactored `CONTRIBUTING.md` to align with CASE method terminology and framework standards.
 - Standardized README structure, replacing blockquotes with tables for examples.
 - Updated "Integrity Check", "Severity Levels", and "Glossary" in README.
+- Update copyright year to 2026.
 
 ### Fixed
 - Updated author link in documentation.
