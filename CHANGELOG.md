@@ -6,17 +6,20 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 [Unreleased]
 
+## [0.2.0] - 2026-01-04
+
+### Added
+- Added "Operating Logic", "Data Structure", and "Responsibility Model" sections to README.
+- Added comprehensive structural standards (Power of Three, 8-Point Hierarchy) to `CONTRIBUTING.md`.
+
 ### Changed
-- Align README structure and terminology with framework standards.
-- Replace blockquote formatting with tables for examples in README
-- Update author name for "How to ask for help" link in README
-- Update glossary terms in README
-- Update integrity check in README
-- Update severity levels in README
-- Update examples in README
+- Refactored `CONTRIBUTING.md` to align with CASE method terminology and framework standards.
+- Standardized README structure, replacing blockquotes with tables for examples.
+- Updated "Integrity Check", "Severity Levels", and "Glossary" in README.
 
 ### Fixed
-- Fix typos in README
+- Updated author link in documentation.
+- Improved readability formatting for examples.
 
 ## [0.1.0] - 2025-12-28
 
