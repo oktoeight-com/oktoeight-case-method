@@ -10,6 +10,7 @@ Whether you are debugging code, fixing a stuck valve, requesting budget, or clar
 
 1.  **Structure over Slogan:** "Asking nicely" is not enough. You must build a structured case for why you need assistance.
 2.  **Context over Speed:** A fast, vague question creates slow, frustrating answers. We prioritize high-context, asynchronous "dumps" over real-time chatter.
+3.  **Artifacts over Conversations:** A request must produce a tangible artifact (ticket, PR, doc), not just a conversation thread.
 
 ## Why CASE?
 
@@ -24,8 +25,9 @@ Standard help requests suffer from the "Lazy Question" anti-pattern. CASE uses a
 
 | Framework | Focus | Blind Spot | CASE Solution |
 | :--- | :--- | :--- | :--- |
-| **SBAR** | Clinical Handoff | Assumes asker knows the solution ("Recommendation"). | Optimized for the *unknown* ("Symptom"). |
-
+| **SBAR** | Clinical Handoff (Situation, Background, Assessment, Recommendation (SBAR)) | Assumes asker knows the solution ("Recommendation"). | Optimized for the *unknown* ("Symptom"). |
+| **Email Chain** | Threaded Conversation | Buried details; hard to track state. | **Structure** forces key details to the top. |
+| **Drive-by** | Verbal Speed | Context loss; interrupts flow. | **Asynchronous** written default. |
 
 ## The CASE Framework
 
@@ -33,10 +35,17 @@ CASE stands for **C**ontext, **A**ction, **S**ymptom, and **E**vidence. These fo
 
 | Attribute | Question | Focus |
 |-----------|----------|-------|
-| **C**ontext | *What are you trying to do?* | The Goal, the environment, the reason. |
-| **A**ction | *What did you try?* | The Attempt, the self-service effort. |
-| **S**ymptom | *What happened?* | The Barrier, the error message, the leak, the noise. |
-| **E**vidence | *Can you prove it?* | The Details, logs, screenshots, photos, serial numbers. |
+| **C**ontext | *What are you trying to do?* | Goal, environment, reason. |
+| **A**ction | *What did you try?* | Attempt, research, results. |
+| **S**ymptom | *What happened?* | Barrier, error, behavior. |
+| **E**vidence | *Can you prove it?* | Logs, screenshots, data. |
+
+### Responsibility Model
+
+| Role | Responsibility |
+| :--- | :--- |
+| **Asker** | Research, structure, and evidence gathering. |
+| **Responder** | Unblocking, decision-making, and approval. |
 
 ## Operating Logic
 
@@ -45,17 +54,18 @@ To prevent "everything is urgent" fatigue, CASE requires a declared severity:
 
 *   **S1 (Critical):** System down, safety hazard, or blocked production. Requires immediate interrupt.
 *   **S2 (Blocker):** Progress halted for one person/team. Requires same-day response.
-*   **S3 (Normal):** Efficiency or cosmetic issue. Adhere to standard SLAs.
+*   **S3 (Normal):** Efficiency or cosmetic issue. Adhere to standard Service Level Agreements (SLAs).
+
+### The CASE Integrity Check
+Before hitting send, perform a final integrity check:
+
+* **If you cannot fill out one of the rows:** You have not researched enough to ask.
+* **If your "Action" row is empty:** You are asking someone else to do your work.
+* **If the Evidence is "See attached" without a summary:** You are increasing the helper's cognitive load.
 
 ## Data Structure
 
-The CASE Request is a structured text block (email, ticket, or chat message) containing the four keys.
-
-### Integrity Check (The 5-Minute Rule)
-Before hitting send, perform a final integrity check:
-
-*   **If you cannot fill out one of the rows:** You have not researched enough to ask.
-*   **If your "Action" row is empty:** You are asking someone else to do your work.
+The CASE Method relies on **The CASE Data Object (Structured Text)**: a text block (email, ticket, or chat message) containing the four keys.
 
 ## Implementation
 
@@ -66,7 +76,7 @@ The CASE Method is format-agnostic. It applies to messages, tickets, and email t
 | Attribute | Detail |
 | :--- | :--- |
 | **Context** | I am trying to deploy the `feature-login` branch to staging to verify the new Single Sign-On (SSO) flow. |
-| **Action** | I ran `npm run deploy:staging` locally and verified that my IAM user has the `s3:PutObject` permission. I also confirmed the destination bucket exists via the AWS CLI. |
+| **Action** | I ran `npm run deploy:staging` locally and verified that my Identity and Access Management (IAM) user has the `s3:PutObject` permission. I also confirmed the destination bucket exists via the AWS Command Line Interface (CLI). |
 | **Symptom** | The build fails at the "Upload to S3" step with a 403 Forbidden error. |
 | **Evidence** | See attached build log `error_log.txt`. The specific error is `AccessDenied: Access Denied` on line 45. |
 
@@ -96,6 +106,10 @@ The CASE Method is format-agnostic. It applies to messages, tickets, and email t
 |--------------|------------|
 | **AWS** | Amazon Web Services |
 | **CASE** | Context, Action, Symptom, Evidence |
+| **CLI** | Command Line Interface |
+| **IAM** | Identity and Access Management |
+| **SBAR** | Situation, Background, Assessment, Recommendation |
+| **SLA** | Service Level Agreement |
 | **SSO** | Single Sign-On |
 
 ## Contributing
