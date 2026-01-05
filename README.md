@@ -6,11 +6,11 @@ The CASE Method is a universal framework for requesting help, approval, or decis
 
 We believe **"The Question is the Interface."**
 
-Whether you are debugging code, fixing a stuck valve, requesting budget, or clarifying policy, the quality of the answer is strictly determined by the quality of the inputs. CASE is built on two immutable tenets:
+Whether you are debugging code, fixing a stuck valve, requesting budget, or clarifying policy, the quality of the answer is strictly determined by the quality of the inputs. CASE is built on three immutable tenets:
 
 1.  **Structure over Slogan:** "Asking nicely" is not enough. You must build a structured case for why you need assistance.
 2.  **Context over Speed:** A fast, vague question creates slow, frustrating answers. We prioritize high-context, asynchronous "dumps" over real-time chatter.
-3.  **Artifacts over Conversations:** A request must produce a tangible artifact (ticket, PR, doc), not just a conversation thread.
+3.  **Artifacts over Conversations:** A request must produce a tangible artifact (ticket, Pull Request (PR), doc), not just a conversation thread.
 
 ## Why CASE?
 
@@ -18,8 +18,8 @@ Standard help requests suffer from the "Lazy Question" anti-pattern. CASE uses a
 
 | Approach | Statement | Impact |
 | :--- | :--- | :--- |
-| **Lazy Question** | "It's broken." | Transfers all cognitive load to the helper. |
-| **CASE Question** | "Here is the situation, the blockage, and the evidence." | Keeps ownership with the asker, enabling the helper to unblock immediately. |
+| **Lazy Question** | *"It's broken."* | Transfers all cognitive load to the helper. |
+| **CASE Question** | *"Here is the situation, the blockage, and the evidence."* | Keeps ownership with the asker, enabling the helper to unblock immediately. |
 
 ### vs. The Alternatives
 
