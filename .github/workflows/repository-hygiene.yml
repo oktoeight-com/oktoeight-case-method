@@ -1,0 +1,22 @@
+name: Repository hygiene
+
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: read
+
+jobs:
+  tracked-files:
+    name: Reject private workspace artifacts
+    runs-on: ubuntu-latest
+    timeout-minutes: 2
+    steps:
+      - name: Check out the revision
+        uses: actions/checkout@v4
+
+      - name: Check tracked paths
+        run: ./scripts/check-repository-hygiene.sh

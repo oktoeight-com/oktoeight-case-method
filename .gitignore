@@ -1,0 +1,8 @@
+# Private workspace artifacts
+/tasks/
+/.agents/
+/.codex/
+/.paperclip/
+/.omp/
+/AGENTS.md
+/CLAUDE.md
