@@ -1,0 +1,72 @@
+name: Method or policy proposal
+description: Propose a clarification or a change that can affect CASE behavior or meaning.
+title: "[Proposal]: "
+body:
+  - type: markdown
+    attributes:
+      value: A proposal does not authorize implementation. The approval owner must record a decision first.
+  - type: dropdown
+    id: work-class
+    attributes:
+      label: Work class
+      options:
+        - Clarification
+        - Method or policy change
+    validations:
+      required: true
+  - type: textarea
+    id: purpose
+    attributes:
+      label: Purpose
+      description: State the problem and the intended result.
+    validations:
+      required: true
+  - type: textarea
+    id: source
+    attributes:
+      label: Source and evidence
+      description: Link the finding, operating decision, user evidence, or conflicting guidance.
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed change
+      description: State the exact rule, wording, example, or boundary that would change.
+    validations:
+      required: true
+  - type: textarea
+    id: effect
+    attributes:
+      label: Effect on method intent
+      description: Identify affected scope, roles, required fields, severity, response targets, escalation rules, or example outcomes.
+    validations:
+      required: true
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Acceptance criteria
+      description: List observable conditions for an approved implementation.
+    validations:
+      required: true
+  - type: textarea
+    id: validation
+    attributes:
+      label: Validation
+      description: State how reviewers will verify the approved result.
+    validations:
+      required: true
+  - type: input
+    id: approval
+    attributes:
+      label: Approval owner
+      description: Name the Chief of Staff or another explicitly assigned policy owner.
+    validations:
+      required: true
+  - type: checkboxes
+    id: approval-gate
+    attributes:
+      label: Approval gate
+      options:
+        - label: Implementation will wait for a recorded decision from the approval owner.
+          required: true

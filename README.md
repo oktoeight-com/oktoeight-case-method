@@ -100,6 +100,12 @@ The CASE Method is format-agnostic. It applies to messages, tickets, and email t
 *   **"Can't I just phone someone?"**
     *   Verbal requests vanish. Written requests persist. You can phone *after* sending the CASE to alert them, but the artifact must exist to allow for asynchronous debugging and future reference.
 
+## Related Guidance
+
+- [CORE Method](https://github.com/oktoeight-com/oktoeight-core-method)
+- [FAST Method](https://github.com/oktoeight-com/oktoeight-fast-method)
+- [Oktoeight company philosophy](https://github.com/oktoeight-com/oktoeight-company-philosophy)
+
 ## Abbreviations
 
 | Abbreviation | Definition |

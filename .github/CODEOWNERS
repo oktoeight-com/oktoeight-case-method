@@ -1,0 +1,7 @@
+# The repository code owner reviews all changes.
+* @jorgenbruntveit
+
+# Review changes to governance and automation explicitly.
+/.github/ @jorgenbruntveit
+/MAINTAINERS.md @jorgenbruntveit
+/scripts/ @jorgenbruntveit

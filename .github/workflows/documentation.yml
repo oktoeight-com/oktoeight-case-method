@@ -1,0 +1,21 @@
+name: Documentation
+
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: read
+
+jobs:
+  documentation:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+      - name: Run documentation checks
+        env:
+          CHECK_EXTERNAL_LINKS: "1"
+        run: ./scripts/check-docs.sh

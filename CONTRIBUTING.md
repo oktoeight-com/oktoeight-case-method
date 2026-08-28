@@ -3,13 +3,20 @@
 We welcome improvements to the CASE Method that align with the following design and contribution standards.
 
 ## Reporting Issues
-*   **Found a typo or error?** Open an Issue with a brief description.
-*   **Have a feature idea?** Open an Issue to discuss it *before* writing code/text.
+
+- Use the editorial-defect form for spelling, formatting, link, or wording corrections that do not change meaning.
+- Use the method-proposal form for clarifications or changes to rules, roles, scope, severity, response targets, escalation, or required fields.
+- Classify the work, state the validation, and name the required approval.
+- Do not implement a method or policy proposal before the approval owner records a decision.
 
 ## Pull Request Process
-1.  **Fork** the repository and create your branch from `main`.
-2.  **Make your changes**. Keep them minimalist.
-3.  **Submit a Pull Request** with a clear description of the *why*.
+
+1. **Fork** the repository and create your branch from `main`.
+2. **Make your changes**. Keep them minimalist.
+3. Run `./scripts/check-docs.sh`.
+4. **Submit a Pull Request** with its issue, work class, validation, rollback, and required approval.
+
+Read [MAINTAINERS.md](MAINTAINERS.md) before you propose a change. It defines ownership, review controls, and the approval boundary for method intent.
 
 ## The "Power of Three" Rule
 
@@ -19,7 +26,7 @@ Symmetry reduces cognitive load. The documentation must adhere to the rule of th
 2.  **Three Alternatives:** Every "vs. The Alternatives" section must compare the method to exactly three existing frameworks.
 3.  **Three-Noun Focus:** Every row in an "Attribute Table" must have a "Focus" column containing a three-noun list (e.g., "Goal, environment, reason").
 
-## Structural Blueprint (The 8-Point Hierarchy)
+## Structural Blueprint (The Required Hierarchy)
 
 To ensure a uniform user experience, the documentation must follow this exact heading sequence:
 
@@ -31,6 +38,8 @@ To ensure a uniform user experience, the documentation must follow this exact he
 6.  `## Data Structure` (H2)
 7.  `## Implementation` (H2)
 8.  `## Common Questions` (H2)
+
+The README can include reference sections after this required sequence. These sections include Related Guidance, Abbreviations, Contributing, and License.
 
 ## Component Standards
 
