@@ -3,7 +3,7 @@ id: 0001
 title: Add maintenance controls
 created: 2026-08-28
 started: 2026-08-28
-closed:
+closed: 2026-08-28
 ---
 
 ## Problem
@@ -24,7 +24,7 @@ Do not change approval scope beyond the approved decisions. Keep each semantic f
 - [x] Issue forms and the pull-request template require a work class, validation, and approval.
 - [x] CODEOWNERS or an equivalent reviewed control exists.
 - [x] Local documentation checks pass.
-- [ ] Pull-request documentation checks pass.
+- [x] Pull-request documentation checks pass.
 - [x] Each semantic finding links to a separate decision issue.
 - [x] The Action guidance and Integrity Check implement the rule and refusal text approved in OKT-14.
 - [x] No new constrained-case example precedes the final OKT-13 scope decision.
@@ -35,9 +35,7 @@ Do not change approval scope beyond the approved decisions. Keep each semantic f
 
 ## Outcome
 
-The branch adds the approved maintenance controls, fixes the Unreleased heading, and adds neutral related-guidance links. It also implements the minimum valid Action rule approved in OKT-14.
-
-The branch implements the Severity, scope, minimum Action, and response-target decisions approved in OKT-12 through OKT-15. It includes one complete example for each approved request type and the constrained cases retained by OKT-13. Remote pull-request validation remains pending until the branch is pushed and a pull request is opened.
+The branch adds the approved maintenance controls, fixes the Unreleased heading, and adds neutral related-guidance links. It implements the Severity, scope, minimum Action, and response-target decisions approved in OKT-12 through OKT-15. Pull request #1 provides the required review path. Chief of Staff approval remains required before merge.
 
 ## Verification
 
@@ -45,3 +43,4 @@ The branch implements the Severity, scope, minimum Action, and response-target d
 - `./scripts/check-docs.sh` passed on 2026-08-28.
 - `CHECK_EXTERNAL_LINKS=1 ./scripts/check-docs.sh` passed on 2026-08-28.
 - `rg -n '\bSLA(s)?\b|service-level agreement' README.md CONTRIBUTING.md MAINTAINERS.md` returned no matches on 2026-08-28.
+- The GitHub `Documentation` workflow passed on pull request #1 on 2026-08-28.
