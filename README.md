@@ -47,6 +47,16 @@ CASE stands for **C**ontext, **A**ction, **S**ymptom, and **E**vidence. These fo
 | **Asker** | Research, structure, and evidence gathering. |
 | **Responder** | Unblocking, decision-making, and approval. |
 
+### Constrained Action
+
+The Action field does not require an unsafe, unauthorized, or policy-setting act. A constrained Action is valid only when it:
+
+1. Names the safety, authority, or policy constraint.
+2. Records a completed preparation step and its result.
+3. Names the next step controlled by the responsible authority.
+
+The preparation step must reduce the responder's discovery work. Planning to investigate later does not satisfy this rule.
+
 ## Operating Logic
 
 ### Severity Levels
@@ -61,6 +71,7 @@ Before hitting send, perform a final integrity check:
 
 * **If you cannot fill out one of the rows:** You have not researched enough to ask.
 * **If your "Action" row is empty:** You are asking someone else to do your work.
+* **If a constrained Action omits the constraint, completed preparation and result, or authority-controlled next step:** Return: "CASE refusal: Action does not show preparation within the asker's control. State the constraint, the preparation completed and its result, and the authority-controlled next step."
 * **If the Evidence is "See attached" without a summary:** You are increasing the helper's cognitive load.
 
 ## Data Structure

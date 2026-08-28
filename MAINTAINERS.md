@@ -35,7 +35,10 @@ The following findings from OKT-3 remain outside the maintenance scope:
 
 - OKT-12: Decide where Severity belongs in the CASE Method.
 - OKT-13: Confirm the approved scope of the CASE Method.
-- OKT-14: Define the minimum valid Action in constrained CASE requests.
 - OKT-15: Approve CASE response targets and escalation ownership.
 
 Do not implement these findings until the approval owner records a decision. Link the approved decision issue in the implementing pull request.
+
+## Implemented method decisions
+
+- OKT-14: A constrained Action must name its constraint, completed preparation and result, and authority-controlled next step.

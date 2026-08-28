@@ -13,6 +13,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ### Changed
 
+- Define the minimum valid Action and refusal rule for constrained CASE requests, as approved in OKT-14.
 - Update README with correct tenet count, clarify PR, and format example questions.
 
 ### Fixed
