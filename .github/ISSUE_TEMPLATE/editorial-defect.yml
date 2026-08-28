@@ -1,0 +1,62 @@
+name: Editorial defect
+description: Report a spelling, formatting, link, or wording defect that does not change meaning.
+title: "[Editorial]: "
+body:
+  - type: markdown
+    attributes:
+      value: Use the method proposal form if the correction can change a rule, scope, required field, or example outcome.
+  - type: dropdown
+    id: work-class
+    attributes:
+      label: Work class
+      options:
+        - Editorial correction
+    validations:
+      required: true
+  - type: textarea
+    id: purpose
+    attributes:
+      label: Purpose
+      description: State the defect and why it matters.
+    validations:
+      required: true
+  - type: input
+    id: location
+    attributes:
+      label: Location
+      description: Give the file, heading, and line or link.
+    validations:
+      required: true
+  - type: textarea
+    id: current-text
+    attributes:
+      label: Current text or behavior
+    validations:
+      required: true
+  - type: textarea
+    id: expected-text
+    attributes:
+      label: Expected correction
+    validations:
+      required: true
+  - type: checkboxes
+    id: meaning
+    attributes:
+      label: Meaning check
+      options:
+        - label: This correction does not change method behavior or meaning.
+          required: true
+  - type: textarea
+    id: validation
+    attributes:
+      label: Validation
+      description: State how a reviewer can verify the correction.
+    validations:
+      required: true
+  - type: input
+    id: approval
+    attributes:
+      label: Required approval
+      description: Name the accountable owner or delegated documentation reviewer.
+    validations:
+      required: true
