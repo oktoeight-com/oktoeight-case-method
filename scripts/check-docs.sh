@@ -22,6 +22,17 @@ require_text() {
   fi
 }
 
+require_count_at_least() {
+  local file=$1
+  local text=$2
+  local expected=$3
+  local actual
+  actual=$(grep -Fc -- "$text" "$file" || true)
+  if [[ "$actual" -lt "$expected" ]]; then
+    fail "$file must contain at least $expected instances of: $text"
+  fi
+}
+
 required_files=(
   README.md
   CONTRIBUTING.md
@@ -67,6 +78,19 @@ require_text README.md '## Implementation'
 require_text README.md '## Common Questions'
 require_text README.md '### Constrained Action'
 require_text README.md 'CASE refusal: Action does not show preparation within the asker'"'"'s control.'
+require_text README.md 'Severity is required metadata, not a fifth CASE attribute.'
+require_text README.md '### Example 1: Help request'
+require_text README.md '### Example 2: Approval request'
+require_text README.md '### Example 3: Decision request'
+require_text README.md '### Example 4: Policy-clarification request'
+require_text README.md 'within 4 business hours'
+require_text README.md 'within 2 business days'
+require_text README.md 'within 15 elapsed minutes'
+require_text README.md 'Europe/Berlin'
+require_text CONTRIBUTING.md 'Severity, Context, Action, Symptom, and Evidence'
+for field in Severity Context Action Symptom Evidence Recipient Channel; do
+  require_count_at_least README.md "| **$field** |" 4
+done
 require_text README.md 'https://github.com/oktoeight-com/oktoeight-core-method'
 require_text README.md 'https://github.com/oktoeight-com/oktoeight-fast-method'
 require_text README.md 'https://github.com/oktoeight-com/oktoeight-company-philosophy'
@@ -89,6 +113,10 @@ done
 require_text .github/pull_request_template.md '## Work class'
 require_text .github/pull_request_template.md '## Validation'
 require_text .github/pull_request_template.md '## Approval'
+
+if grep -RniE '\bSLA(s)?\b|service-level agreement' README.md CONTRIBUTING.md MAINTAINERS.md; then
+  fail 'Documentation contains an undefined SLA reference.'
+fi
 
 while IFS= read -r match; do
   source_file=${match%%:*}

@@ -8,6 +8,9 @@ We welcome improvements to the CASE Method that align with the following design 
 - Use the method-proposal form for clarifications or changes to rules, roles, scope, severity, response targets, escalation, or required fields.
 - Classify the work, state the validation, and name the required approval.
 - Do not implement a method or policy proposal before the approval owner records a decision.
+- Treat Severity as required top-level metadata. Keep the canonical order: Severity, Context, Action, Symptom, Evidence.
+- Include Recipient and Channel as required delivery metadata in complete templates and examples.
+- Link every approval, decision, or policy interpretation to its authoritative outcome record.
 
 ## Pull Request Process
 
@@ -52,6 +55,8 @@ The documentation must include `### The CASE Integrity Check`. Use a bulleted li
 
 ### 3. Data Object Naming
 Refer to the core data structure as **"The CASE Data Object (Structured Text)"**.
+
+Every complete data object, template, and example must contain Severity, Context, Action, Symptom, and Evidence in that order. It must also contain Recipient and Channel.
 
 ## Visual Identity
 - **Minimalist Markdown:** Use standard GitHub Flavored Markdown only.

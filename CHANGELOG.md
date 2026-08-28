@@ -9,11 +9,14 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 ### Added
 
 - Add repository ownership, issue forms, pull-request controls, and documentation checks.
-- Add related-guidance navigation and a register for unresolved method decisions.
+- Add related-guidance navigation and a method-decision register.
 
 ### Changed
 
 - Define the minimum valid Action and refusal rule for constrained CASE requests, as approved in OKT-14.
+- Define Severity as required metadata, as approved in OKT-12.
+- Extend CASE to help, approval, decision, and policy-clarification requests, as approved in OKT-13.
+- Replace undefined service-level wording with the response targets approved in OKT-15.
 - Update README with correct tenet count, clarify PR, and format example questions.
 
 ### Fixed

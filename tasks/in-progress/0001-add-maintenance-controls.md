@@ -14,9 +14,9 @@ The CASE Method repository has no named ownership, structured issue intake, pull
 
 Add the maintenance controls approved in OKT-5. Repair the approved changelog defect from OKT-3. Add related-guidance navigation and local and pull-request documentation checks.
 
-Implement the minimum valid Action rule approved in OKT-14. Do not add constrained-case examples until OKT-13 has a final scope decision.
+Implement the method decisions approved in OKT-12 through OKT-15. Add only the constrained-case examples retained by the approved OKT-13 scope.
 
-Do not change severity, response targets, approval scope, method scope, escalation rules, or required fields. Keep each semantic finding linked to its separate decision issue.
+Do not change approval scope beyond the approved decisions. Keep each semantic finding linked to its separate decision issue.
 
 ## Acceptance criteria
 
@@ -28,15 +28,20 @@ Do not change severity, response targets, approval scope, method scope, escalati
 - [x] Each semantic finding links to a separate decision issue.
 - [x] The Action guidance and Integrity Check implement the rule and refusal text approved in OKT-14.
 - [x] No new constrained-case example precedes the final OKT-13 scope decision.
+- [x] Severity is required top-level metadata in each complete object, template, and example.
+- [x] The scope, examples, exclusions, and field meanings implement OKT-13.
+- [x] The response targets, clock rules, owners, and escalation paths implement OKT-15.
+- [x] No undefined SLA reference remains.
 
 ## Outcome
 
 The branch adds the approved maintenance controls, fixes the Unreleased heading, and adds neutral related-guidance links. It also implements the minimum valid Action rule approved in OKT-14.
 
-The scope, severity, and response-target findings remain pending in OKT-12, OKT-13, and OKT-15. No constrained-case examples were added because OKT-13 remains in review. Remote pull-request validation remains pending until the branch is pushed and a pull request is opened.
+The branch implements the Severity, scope, minimum Action, and response-target decisions approved in OKT-12 through OKT-15. It includes one complete example for each approved request type and the constrained cases retained by OKT-13. Remote pull-request validation remains pending until the branch is pushed and a pull request is opened.
 
 ## Verification
 
 - `git diff --check` passed on 2026-08-28.
 - `./scripts/check-docs.sh` passed on 2026-08-28.
 - `CHECK_EXTERNAL_LINKS=1 ./scripts/check-docs.sh` passed on 2026-08-28.
+- `rg -n '\bSLA(s)?\b|service-level agreement' README.md CONTRIBUTING.md MAINTAINERS.md` returned no matches on 2026-08-28.

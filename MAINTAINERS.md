@@ -29,16 +29,11 @@ If reviewers disagree about the work class, use the class with the higher approv
 | Clarification | Adds an explanation or example without changing required behavior. | Accountable owner and method reviewer |
 | Method or policy change | Changes a rule, obligation, exception, threshold, role, scope, or required field. | Chief of Staff |
 
-## Open method decisions
-
-The following findings from OKT-3 remain outside the maintenance scope:
-
-- OKT-12: Decide where Severity belongs in the CASE Method.
-- OKT-13: Confirm the approved scope of the CASE Method.
-- OKT-15: Approve CASE response targets and escalation ownership.
-
-Do not implement these findings until the approval owner records a decision. Link the approved decision issue in the implementing pull request.
-
 ## Implemented method decisions
 
+- OKT-12: Severity is required top-level metadata before the four CASE attributes.
+- OKT-13: CASE covers help, approval, decision, and policy-clarification requests, with explicit exclusions.
 - OKT-14: A constrained Action must name its constraint, completed preparation and result, and authority-controlled next step.
+- OKT-15: CASE uses approved response targets, calendar rules, response ownership, and escalation paths.
+
+Link each approved decision issue in the implementing pull request.
