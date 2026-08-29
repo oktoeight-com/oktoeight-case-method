@@ -1,121 +1,120 @@
 # The CASE Method
 
-The CASE Method is a universal framework for requesting help, approval, or decision-making. It is a minimalist philosophy that prioritizes context, actionable details, and respect for asynchronous communication.
+CASE prepares an outbound request for help, approval, or a decision when a concrete blocker exists. It gives the recipient the goal, prior work, exact barrier, and facts needed to respond.
 
-## Core Philosophy
+## Use CASE when
 
-We believe **"The Question is the Interface."**
+Use CASE when all of these conditions apply:
 
-Whether you are debugging code, fixing a stuck valve, requesting budget, or clarifying policy, the quality of the answer is strictly determined by the quality of the inputs. CASE is built on two immutable tenets:
+- You will send the request to a named recipient through a chosen channel.
+- You need help, approval, or a decision.
+- A specific error, barrier, or unresolved choice blocks or impedes the work.
 
-1.  **Structure over Slogan:** "Asking nicely" is not enough. You must build a structured case for why you need assistance.
-2.  **Context over Speed:** A fast, vague question creates slow, frustrating answers. We prioritize high-context, asynchronous "dumps" over real-time chatter.
-3.  **Artifacts over Conversations:** A request must produce a tangible artifact (ticket, PR, doc), not just a conversation thread.
+Do not use CASE for a status update, general discussion, or an idea that has no concrete blocker.
 
-## Why CASE?
+Immediate safety or containment action takes precedence. Take that action first. Prepare the CASE request once the situation is safe or contained.
 
-Standard help requests suffer from the "Lazy Question" anti-pattern. CASE uses a **Responsibility Model** to expose where the work belongs:
+## The CASE framework
 
-| Approach | Statement | Impact |
-| :--- | :--- | :--- |
-| **Lazy Question** | "It's broken." | Transfers all cognitive load to the helper. |
-| **CASE Question** | "Here is the situation, the blockage, and the evidence." | Keeps ownership with the asker, enabling the helper to unblock immediately. |
+Write the four fields in this order:
 
-### vs. The Alternatives
+| Field | Include |
+| --- | --- |
+| **C — Context** | The goal, environment, and why the work matters. |
+| **A — Action** | Research, attempts, preparation, and the observed result of each action. |
+| **S — Symptom** | The exact error, barrier, or unresolved choice. |
+| **E — Evidence** | Quoted logs or data, relevant version facts, or reachable artifacts that substantiate the symptom. |
 
-| Framework | Focus | Blind Spot | CASE Solution |
-| :--- | :--- | :--- | :--- |
-| **SBAR** | Clinical Handoff (Situation, Background, Assessment, Recommendation (SBAR)) | Assumes asker knows the solution ("Recommendation"). | Optimized for the *unknown* ("Symptom"). |
-| **Email Chain** | Threaded Conversation | Buried details; hard to track state. | **Structure** forces key details to the top. |
-| **Drive-by** | Verbal Speed | Context loss; interrupts flow. | **Asynchronous** written default. |
+Assign severity from the current impact:
 
-## The CASE Framework
+- **S1:** Active production is unavailable, data is at risk, or the issue is safety-critical.
+- **S2:** The blocker stops the work.
+- **S3:** Work continues despite the blocker.
 
-CASE stands for **C**ontext, **A**ction, **S**ymptom, and **E**vidence. These four attributes are required for any valid request:
+Severity does not set a response time.
 
-| Attribute | Question | Focus |
-|-----------|----------|-------|
-| **C**ontext | *What are you trying to do?* | Goal, environment, reason. |
-| **A**ction | *What did you try?* | Attempt, research, results. |
-| **S**ymptom | *What happened?* | Barrier, error, behavior. |
-| **E**vidence | *Can you prove it?* | Logs, screenshots, data. |
+## Required record
 
-### Responsibility Model
+Every CASE request contains:
 
-| Role | Responsibility |
-| :--- | :--- |
-| **Asker** | Research, structure, and evidence gathering. |
-| **Responder** | Unblocking, decision-making, and approval. |
+- a one-line **Summary** that states the requested help, approval, or decision;
+- the **Recipient**;
+- the **Channel**;
+- the **Severity**;
+- all four CASE fields.
 
-## Operating Logic
+Use this template. Keep Context, Action, Symptom, and Evidence in C/A/S/E order.
 
-### Severity Levels
-To prevent "everything is urgent" fatigue, CASE requires a declared severity:
+```text
+Summary: <one-line request>
+Recipient: <person or public support destination>
+Channel: <email, message, ticket, or other outbound channel>
+Severity: <S1, S2, or S3>
 
-*   **S1 (Critical):** System down, safety hazard, or blocked production. Requires immediate interrupt.
-*   **S2 (Blocker):** Progress halted for one person/team. Requires same-day response.
-*   **S3 (Normal):** Efficiency or cosmetic issue. Adhere to standard Service Level Agreements (SLAs).
+Context
+<goal, environment, and why>
 
-### The CASE Integrity Check
-Before hitting send, perform a final integrity check:
+Action
+<research, attempts, preparation, and observed results>
 
-* **If you cannot fill out one of the rows:** You have not researched enough to ask.
-* **If your "Action" row is empty:** You are asking someone else to do your work.
-* **If the Evidence is "See attached" without a summary:** You are increasing the helper's cognitive load.
+Symptom
+<exact error, barrier, or unresolved choice>
 
-## Data Structure
+Evidence
+<quoted logs or data, version facts, or reachable artifacts>
+```
 
-The CASE Method relies on **The CASE Data Object (Structured Text)**: a text block (email, ticket, or chat message) containing the four keys.
+## Apply CASE
 
-## Implementation
+1. State the concrete blocker and the help, approval, or decision that can resolve it.
+2. Select the recipient and channel.
+3. Assign severity from the current impact. Do not use urgency as a substitute for impact.
+4. Write a one-line summary that tells the recipient what you need.
+5. Complete Context, Action, Symptom, and Evidence in order.
+6. Check that each evidence item substantiates a statement in the request, then send it.
 
-The CASE Method is format-agnostic. It applies to messages, tickets, and email threads equally.
+## Refuse when
 
-### Example 1: Software
+Do not send the request until you correct any of these conditions:
 
-| Attribute | Detail |
-| :--- | :--- |
-| **Context** | I am trying to deploy the `feature-login` branch to staging to verify the new Single Sign-On (SSO) flow. |
-| **Action** | I ran `npm run deploy:staging` locally and verified that my Identity and Access Management (IAM) user has the `s3:PutObject` permission. I also confirmed the destination bucket exists via the AWS Command Line Interface (CLI). |
-| **Symptom** | The build fails at the "Upload to S3" step with a 403 Forbidden error. |
-| **Evidence** | See attached build log `error_log.txt`. The specific error is `AccessDenied: Access Denied` on line 45. |
+- **Missing why:** Context does not explain why the goal matters.
+- **No action:** Action contains no research, attempt, preparation, or observed result.
+- **Vague symptom:** Symptom does not name the exact error, barrier, or unresolved choice.
+- **Unsubstantiated evidence:** Evidence repeats a claim without quoted facts or a reachable artifact.
+- **Inflated severity:** The selected severity is higher than the current impact supports.
 
-### Example 2: Hardware
+## Worked example
 
-| Attribute | Detail |
-| :--- | :--- |
-| **Context** | I am trying to calibrate the position transmitter on Control Valve V-101 (Steam Supply) using a 475 Field Communicator. |
-| **Action** | I performed the auto-tune sequence and verified the supply air is stable at 6 bar. I also hooked up a Fluke 789 to measure the loop current. |
-| **Symptom** | The valve moves to 50% physically, but the feedback signal reads 14.5mA (approx 65%) instead of 12mA. It fails the linearity check with a "Drive Signal Saturation" error. |
-| **Evidence** | See photo of the communicator screen showing the error code and the hysteresis graph. |
+```text
+Summary: Approve PostgreSQL 16 for the reporting service so implementation can continue
+Recipient: Priya Nair
+Channel: Email
+Severity: S2
 
-## Common Questions
+Context
+I am preparing a reporting service on Ubuntu 24.04. The service must accept concurrent writes and restore from a daily backup. I need the database choice before I can finish the schema and migration code.
 
-*   **"But what if I just need a quick fix?"**
-    *   "Quick fixes" without context are dangerous. CASE forces verification before action. If it is truly quick, writing the CASE will take 2 minutes.
+Action
+I tested SQLite 3.45 and PostgreSQL 16.4 with 1,000 writes from 20 concurrent workers. I then restored each database from its backup. SQLite returned lock errors during the write test. PostgreSQL completed both the write test and restore. I also checked the hosting plan and confirmed that PostgreSQL 16 costs 250 NOK per month.
 
-*   **"Who decides the Severity?"**
-    *   The Asker sets it initially, but the Responder has the right to downgrade it with cause. If you mark a typo as **S1 (Critical)**, you lose the trust required for the next real emergency.
+Symptom
+Implementation is blocked until you approve either PostgreSQL 16 at 250 NOK per month or SQLite with a reduced concurrent-write requirement.
 
-*   **"Can't I just phone someone?"**
-    *   Verbal requests vanish. Written requests persist. You can phone *after* sending the CASE to alert them, but the artifact must exist to allow for asynchronous debugging and future reference.
+Evidence
+The SQLite result was: `37 of 1,000 writes failed: database is locked`. The PostgreSQL result was: `0 of 1,000 writes failed`. Both restored backups contained all 1,000 records. The current hosting plan lists managed PostgreSQL 16 at `250 NOK/month`.
+```
 
-## Abbreviations
+The example is S2 because the unresolved choice stops implementation. Its evidence is present in the request and supports the decision.
 
-| Abbreviation | Definition |
-|--------------|------------|
-| **AWS** | Amazon Web Services |
-| **CASE** | Context, Action, Symptom, Evidence |
-| **CLI** | Command Line Interface |
-| **IAM** | Identity and Access Management |
-| **SBAR** | Situation, Background, Assessment, Recommendation |
-| **SLA** | Service Level Agreement |
-| **SSO** | Single Sign-On |
+## Related methods
+
+- [CORE](https://github.com/oktoeight-com/oktoeight-core-method) defines a bounded project before work starts.
+- [FAST](https://github.com/oktoeight-com/oktoeight-fast-method) prepares a meeting that must produce a decision.
 
 ## Contributing
 
-We welcome improvements that align with our minimalist philosophy. Please see [CONTRIBUTING.md](CONTRIBUTING.md) for details on how to propose changes.
+See [CONTRIBUTING.md](CONTRIBUTING.md) to propose a change.
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+The CASE Method is available under the [MIT License](LICENSE).
