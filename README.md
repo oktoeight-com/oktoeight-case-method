@@ -111,6 +111,12 @@ The example is S2 because the unresolved choice stops implementation. Its eviden
 - [CORE](https://github.com/oktoeight-com/oktoeight-core-method) defines a bounded project before work starts.
 - [FAST](https://github.com/oktoeight-com/oktoeight-fast-method) prepares a meeting that must produce a decision.
 
+## Agent skill
+
+This repository is also a portable [Agent Skill](https://agentskills.io). To install it, copy or clone this repository into the skills directory used by an Agent Skills-compatible client. Keep the directory name `oktoeight-case-method` so it matches the skill name in `SKILL.md`.
+
+This skill works alone. To combine methods, install the [CORE Method](https://github.com/oktoeight-com/oktoeight-core-method) and [FAST Method](https://github.com/oktoeight-com/oktoeight-fast-method) as sibling skill directories. Each skill routes work to another installed Oktoeight skill only when that method fits better.
+
 ## Contributing
 
 See [CONTRIBUTING.md](CONTRIBUTING.md) to propose a change.

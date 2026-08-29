@@ -6,6 +6,11 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased]
 
+## [1.1.0] - 2026-08-29
+
+### Added
+- Added a standalone Agent Skill for applying the CASE Method in Agent Skills-compatible clients.
+
 ## [1.0.0] - 2026-08-29
 
 ### Changed
@@ -45,7 +50,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - "Abbreviations" reference table in README.
 - Contribution guidelines in `CONTRIBUTING.md`.
 
-[Unreleased]: https://github.com/oktoeight-com/oktoeight-case-method/compare/v1.0.0...HEAD
+[Unreleased]: https://github.com/oktoeight-com/oktoeight-case-method/compare/v1.1.0...HEAD
+[1.1.0]: https://github.com/oktoeight-com/oktoeight-case-method/compare/v1.0.0...v1.1.0
 [1.0.0]: https://github.com/oktoeight-com/oktoeight-case-method/compare/v0.2.0...v1.0.0
 [0.2.0]: https://github.com/oktoeight-com/oktoeight-case-method/compare/v0.1.0...v0.2.0
 [0.1.0]: https://github.com/oktoeight-com/oktoeight-case-method/releases/tag/v0.1.0
