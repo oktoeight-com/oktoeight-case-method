@@ -6,6 +6,11 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased]
 
+## [1.1.1] - 2026-08-30
+
+### Changed
+- Updated the worked example to use USD and clarified that CASE accepts any clearly stated currency.
+
 ## [1.1.0] - 2026-08-29
 
 ### Added
@@ -50,7 +55,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - "Abbreviations" reference table in README.
 - Contribution guidelines in `CONTRIBUTING.md`.
 
-[Unreleased]: https://github.com/oktoeight-com/oktoeight-case-method/compare/v1.1.0...HEAD
+[Unreleased]: https://github.com/oktoeight-com/oktoeight-case-method/compare/v1.1.1...HEAD
+[1.1.1]: https://github.com/oktoeight-com/oktoeight-case-method/compare/v1.1.0...v1.1.1
 [1.1.0]: https://github.com/oktoeight-com/oktoeight-case-method/compare/v1.0.0...v1.1.0
 [1.0.0]: https://github.com/oktoeight-com/oktoeight-case-method/compare/v0.2.0...v1.0.0
 [0.2.0]: https://github.com/oktoeight-com/oktoeight-case-method/compare/v0.1.0...v0.2.0

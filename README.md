@@ -85,6 +85,8 @@ Do not send the request until you correct any of these conditions:
 
 ## Worked example
 
+This example uses USD, but CASE accepts any clearly stated currency.
+
 ```text
 Summary: Approve PostgreSQL 16 for the reporting service so implementation can continue
 Recipient: Priya Nair
@@ -95,13 +97,13 @@ Context
 I am preparing a reporting service on Ubuntu 24.04. The service must accept concurrent writes and restore from a daily backup. I need the database choice before I can finish the schema and migration code.
 
 Action
-I tested SQLite 3.45 and PostgreSQL 16.4 with 1,000 writes from 20 concurrent workers. I then restored each database from its backup. SQLite returned lock errors during the write test. PostgreSQL completed both the write test and restore. I also checked the hosting plan and confirmed that PostgreSQL 16 costs 250 NOK per month.
+I tested SQLite 3.45 and PostgreSQL 16.4 with 1,000 writes from 20 concurrent workers. I then restored each database from its backup. SQLite returned lock errors during the write test. PostgreSQL completed both the write test and restore. I also checked the hosting plan and confirmed that PostgreSQL 16 costs 25 USD/month.
 
 Symptom
-Implementation is blocked until you approve either PostgreSQL 16 at 250 NOK per month or SQLite with a reduced concurrent-write requirement.
+Implementation is blocked until you approve either PostgreSQL 16 at 25 USD/month or SQLite with a reduced concurrent-write requirement.
 
 Evidence
-The SQLite result was: `37 of 1,000 writes failed: database is locked`. The PostgreSQL result was: `0 of 1,000 writes failed`. Both restored backups contained all 1,000 records. The current hosting plan lists managed PostgreSQL 16 at `250 NOK/month`.
+The SQLite result was: `37 of 1,000 writes failed: database is locked`. The PostgreSQL result was: `0 of 1,000 writes failed`. Both restored backups contained all 1,000 records. The current hosting plan lists managed PostgreSQL 16 at 25 USD/month.
 ```
 
 The example is S2 because the unresolved choice stops implementation. Its evidence is present in the request and supports the decision.
